@@ -3,12 +3,12 @@ import numpy as np
 
 
 face_detector = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
-Eye_detector1 = cv2.CascadeClassifier("haarcascade_lefteye_2splits.xml")
+Eyes_detector1 = cv2.CascadeClassifier("'src/frontalEyes35x16.xml")
 smile_detector = cv2.CascadeClassifier("haarcascade_smile.xml")
 
 
 emoji_face = cv2.imread('images.png',0)
-emoji_eye = cv2.imread('eye.png',0)
+emoji_eyes = cv2.imread('eyes.png',0)
 emoji_mouth = cv2.imread('smile.png',0)
 
 
@@ -31,7 +31,7 @@ while (True):
     
 
     faces = face_detector.detectMultiScale(frame, 1.3)
-    eyes = Eye_detector1.detectMultiScale(frame, 1.2)
+    eyes = Eyes_detector1.detectMultiScale(frame, 1.2)
     mouth = smile_detector.detectMultiScale(frame, 1.2)
 
     if cv2.waitKey(1) & 0xFF == ord('1'):
@@ -49,7 +49,7 @@ while (True):
     
     if cv2.waitKey(1) & 0xFF == ord('2'):
         for (ex, ey, ew, eh) in eyes:
-            emoji_eyes = cv2.resize(emoji_eye, (ew, eh))
+            emoji_eyes = cv2.resize(emoji_eyes, (ew, eh))
             frame[ey:ey+eh, ex:ex+ew] = emoji_eyes
             for i in range(ey,ey+eh):
                 for j in range(ex,ex+ew):
