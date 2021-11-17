@@ -3,7 +3,7 @@ import numpy as np
 
 
 face_detector = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
-Eyes_detector1 = cv2.CascadeClassifier("'src/frontalEyes35x16.xml")
+Eyes_detector1 = cv2.CascadeClassifier("src/frontalEyes35x16.xml")
 smile_detector = cv2.CascadeClassifier("haarcascade_smile.xml")
 
 
