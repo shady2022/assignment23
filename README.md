@@ -1,6 +1,6 @@
 # assignment23
 
-you can see the imoji on your face please press number 1 
+you can see the emoji on your face please press number 1 
 ![img](https://user-images.githubusercontent.com/88148144/142144530-5b85b137-b7a1-49a5-8376-8f2a3c2d6826.png)
 
 plz enter number 2 on your keyboard,created eyes and smile detection xml file (i dont like this style on my face :/ )
